@@ -13,3 +13,7 @@ class AdditionQuestion(Question):
 class SubtractionQuestion(Question):
      def __init__(self, a, b):
           super().__init__(f"{a} - {b}", a - b)
+
+class MultiplicationQuestion(Question):
+     def __init__(self, a, b):
+          super().__init__(f"{a} * {b}", a * b)
