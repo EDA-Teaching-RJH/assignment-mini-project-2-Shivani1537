@@ -1,11 +1,22 @@
 from math_engine import generate_random_question
 
-q = generate_random_question()
-print("Question:", q.text)
+def main():
+    score = 0
 
-user_answer = int(input("Your answer: "))
+    for i in range(3):
+        q = generate_random_question()
+        print("Question:", q.text)
 
-if q.check_answer(user_answer):
-    print("Correct!")
-else:
-    print("Wrong")
+        user_answer = int(input("Your answer: "))
+
+        if q.check_answer(user_answer):
+            print("Correct!")
+            score += 1
+        else:
+            print("Wrong")
+
+    print("Final score:", score)
+
+
+if __name__ == "__main__":
+    main()
