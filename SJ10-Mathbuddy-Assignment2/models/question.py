@@ -10,7 +10,7 @@ class Question:
         return user_answer == self.answer
     
 class AdditionQuestion(Question):
-    def __init(self, a, b):
+    def __init__(self, a, b):
         super().__init__(f"{a} + {b}", a + b)
 
 class SubtractionQuestion(Question):
@@ -18,3 +18,7 @@ class SubtractionQuestion(Question):
         if a < b:
             a, b = b, a
         super().__init__(f"{a} - {b}", a - b)
+
+class MultiplicationQuestion(Question):
+    def __init__(self, a, b):
+        super().__init__(f"{a} * {b}", a * b)
