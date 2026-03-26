@@ -8,3 +8,7 @@ class Question:
 
     def check_answer(self, user_answer):
         return user_answer == self.answer
+    
+class AdditionQuestion(Question):
+    def __init(self, a, b):
+        super().__init__(f"{a} + {b}", a + b)
