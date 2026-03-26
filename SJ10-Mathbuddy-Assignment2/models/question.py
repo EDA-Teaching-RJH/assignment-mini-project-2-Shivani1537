@@ -12,3 +12,9 @@ class Question:
 class AdditionQuestion(Question):
     def __init(self, a, b):
         super().__init__(f"{a} + {b}", a + b)
+
+class SubtractionQuestion(Question):
+    def __init__(self, a, b):
+        if a < b:
+            a, b = b, a
+        super().__init__(f"{a} - {b}", a - b)
