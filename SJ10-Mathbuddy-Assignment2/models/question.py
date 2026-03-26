@@ -22,3 +22,9 @@ class SubtractionQuestion(Question):
 class MultiplicationQuestion(Question):
     def __init__(self, a, b):
         super().__init__(f"{a} * {b}", a * b)
+
+class DivisionQuestion(Question):
+    def __init__(self, answer, divisor):
+        # ensures no decimal answers
+        dividend = answer * divisor
+        super().__init__(f"{dividend} / {divisor}", answer)
