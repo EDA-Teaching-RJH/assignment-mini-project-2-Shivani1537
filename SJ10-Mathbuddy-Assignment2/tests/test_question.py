@@ -15,3 +15,7 @@ class TestQuestion(unittest.TestCase):
     def test_negative_answer(self):
         q = Question("5 - 10", -5)
         self.assertTrue(q.check_answer(-5))
+
+    
+if __name__ == "__main__":
+    unittest.main()
