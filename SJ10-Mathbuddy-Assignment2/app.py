@@ -1,8 +1,14 @@
 from math_engine import generate_random_question
-from validator import is_valid_number
+from validator import is_valid_number, is_valid_name
 
 def main():
     score = 0
+
+    name = input("Enter your name: ")
+
+    while not is_valid_name(name):
+        print("Invalid name! Please use letters only.")
+        name = input("Enter your name: ")
 
 # loop controls how many questions are asked in the quiz.
 # value inside range() determines total number of questions.
@@ -25,7 +31,7 @@ def main():
         else:
             print("Wrong")
 
-    print("Final score:", score)
+    print(f"{name}, your final score is:", score)
 
 
 if __name__ == "__main__":
