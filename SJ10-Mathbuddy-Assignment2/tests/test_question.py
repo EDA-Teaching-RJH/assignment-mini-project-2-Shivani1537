@@ -1,5 +1,8 @@
-import unittest
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
+import unittest
 from models.question import Question
 
 class TestQuestion(unittest.TestCase):
