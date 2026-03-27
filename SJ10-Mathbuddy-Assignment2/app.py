@@ -11,7 +11,13 @@ def main():
         q = generate_random_question()
         print("Question:", q.text)
 
-        user_answer = int(input("Your answer: "))
+        user_input = input("Your answer: ")
+
+        while not is_valid_number(user_input):
+            print("Invalid input! please enter a number.")
+            user_input = input("your answer: ")
+
+        user_answer = int(user_input)
 
         if q.check_answer(user_answer):
             print("Correct!")
