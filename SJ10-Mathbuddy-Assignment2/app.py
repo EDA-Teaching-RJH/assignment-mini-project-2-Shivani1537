@@ -34,6 +34,8 @@ def main():
 
     print(f"{name}, your final score is:", score)
 
+    save_score(name, score)
 
+    
 if __name__ == "__main__":
     main()
