@@ -1,5 +1,6 @@
 from math_engine import generate_random_question
 from validator import is_valid_number, is_valid_name
+from file_handler import save_score
 
 def main():
     score = 0
